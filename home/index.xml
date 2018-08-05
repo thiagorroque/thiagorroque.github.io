@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Homes on Roman Ring</title>
+    <link>/home/</link>
+    <description>Recent content in Homes on Roman Ring</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0300</lastBuildDate>
+    
+	<atom:link href="/home/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>/home/about/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0300</pubDate>
+      
+      <guid>/home/about/</guid>
+      <description>Biography I have started my career path as a self-taught web developer, specializing with Symfony web framework. I have worked on projects of various scale, including online education platforms, 360° virtual tour guides, and fitness planners.
+During this time I have made numerous contributions the open-source community, both directly to the projects I&amp;rsquo;ve relied upon, and releasing my own projects.
+Eventually I have decided to pivot my career and take an active part in research and development of a field I am passionate about: artificial intelligence.</description>
+    </item>
+    
+  </channel>
+</rss>
