@@ -6,7 +6,7 @@
     <description>Recent content in Homes on Roman Ring</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
+    <copyright>&amp;copy; 2018--2019</copyright>
     <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0300</lastBuildDate>
     
 	<atom:link href="http://inoryy.com/home/index.xml" rel="self" type="application/rss+xml" />
@@ -20,6 +20,43 @@
       <guid>http://inoryy.com/home/about/</guid>
       <description>Biography I have started my career path as a self-taught web developer, specializing with Symfony web framework. I have worked on projects of various scale in many different domains such as finance, education and health. During this time I have actively participated in the open-source community, contributing to projects I used, and releasing my own projects for others to use.
 Eventually I have decided to pivot my career and take an active part in research and development of a field I am very passionate about: artificial intelligence.</description>
+    </item>
+    
+    <item>
+      <title>Blog Posts</title>
+      <link>http://inoryy.com/home/posts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://inoryy.com/home/posts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>http://inoryy.com/home/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://inoryy.com/home/projects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Talks</title>
+      <link>http://inoryy.com/home/talks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://inoryy.com/home/talks/</guid>
+      <description> Reinforcement Learning Guest Lecture - University of Tartu, 2018 Deep Reinforcement Learning - DevClub, Tallinn, 2018 Behavior Driven Development with Behat and Mink - DevClub, Tallinn, 2013  </description>
+    </item>
+    
+    <item>
+      <title>Teaching</title>
+      <link>http://inoryy.com/home/teaching/</link>
+      <pubDate>Fri, 05 Jan 2018 00:00:00 +0200</pubDate>
+      
+      <guid>http://inoryy.com/home/teaching/</guid>
+      <description>Teaching Assistant, University of Tartu:
+ MTAT.03.317: Deep Reinforcement Learning, Fall 2018  </description>
     </item>
     
   </channel>

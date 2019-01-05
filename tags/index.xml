@@ -6,36 +6,27 @@
     <description>Recent content in Tags on Roman Ring</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0300</lastBuildDate>
+    <copyright>&amp;copy; 2018--2019</copyright>
+    <lastBuildDate>Thu, 04 Jan 2018 00:00:00 +0200</lastBuildDate>
     
 	<atom:link href="http://inoryy.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Academic</title>
-      <link>http://inoryy.com/tags/academic/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0300</pubDate>
+      <title>Bot Programming</title>
+      <link>http://inoryy.com/tags/bot-programming/</link>
+      <pubDate>Thu, 04 Jan 2018 00:00:00 +0200</pubDate>
       
-      <guid>http://inoryy.com/tags/academic/</guid>
+      <guid>http://inoryy.com/tags/bot-programming/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Deep Learning</title>
-      <link>http://inoryy.com/tags/deep-learning/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0300</pubDate>
+      <title>Reinforcement Learning</title>
+      <link>http://inoryy.com/tags/reinforcement-learning/</link>
+      <pubDate>Fri, 05 Jan 2018 00:00:00 +0200</pubDate>
       
-      <guid>http://inoryy.com/tags/deep-learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Demo</title>
-      <link>http://inoryy.com/tags/demo/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0300</pubDate>
-      
-      <guid>http://inoryy.com/tags/demo/</guid>
+      <guid>http://inoryy.com/tags/reinforcement-learning/</guid>
       <description></description>
     </item>
     

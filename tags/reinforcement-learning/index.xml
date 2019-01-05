@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Projects on Roman Ring</title>
-    <link>http://inoryy.com/project/</link>
-    <description>Recent content in Projects on Roman Ring</description>
+    <title>Reinforcement Learning on Roman Ring</title>
+    <link>http://inoryy.com/tags/reinforcement-learning/</link>
+    <description>Recent content in Reinforcement Learning on Roman Ring</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018--2019</copyright>
     <lastBuildDate>Fri, 05 Jan 2018 00:00:00 +0200</lastBuildDate>
     
-	<atom:link href="http://inoryy.com/project/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://inoryy.com/tags/reinforcement-learning/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       <pubDate>Fri, 05 Jan 2018 00:00:00 +0200</pubDate>
       
       <guid>http://inoryy.com/project/reaver-drl/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Starter Agent for Coders Strike Back AI Challenge</title>
-      <link>http://inoryy.com/project/csb-starter/</link>
-      <pubDate>Thu, 04 Jan 2018 00:00:00 +0200</pubDate>
-      
-      <guid>http://inoryy.com/project/csb-starter/</guid>
       <description></description>
     </item>
     
