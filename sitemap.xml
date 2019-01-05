@@ -4,6 +4,14 @@
     
     <url>
     
+      <loc>http://inoryy.com/post/why-study-statistics-for-artificial-intelligence/</loc>
+      <lastmod>2019-01-05T00:00:00+02:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>http://inoryy.com/project/reaver-drl/</loc>
       <lastmod>2018-01-05T00:00:00+02:00</lastmod>
     </url>
@@ -30,6 +38,15 @@
     <url>
     
       <loc>http://inoryy.com/categories/</loc>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://inoryy.com/post/</loc>
+      <lastmod>2019-01-05T00:00:00+02:00</lastmod>
       <priority>0</priority>
     </url>
     

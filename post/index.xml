@@ -6,22 +6,19 @@
     <description>Recent content in Posts on Roman Ring</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0200</lastBuildDate>
+    <copyright>&amp;copy; 2018--2019</copyright>
+    <lastBuildDate>Sat, 05 Jan 2019 00:00:00 +0200</lastBuildDate>
     
 	<atom:link href="http://inoryy.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Academic: the website designer for Hugo</title>
-      <link>http://inoryy.com/post/getting-started/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0300</pubDate>
+      <title>Why I Majored in Statistics for a Career in Artificial Intelligence</title>
+      <link>http://inoryy.com/post/why-study-statistics-for-artificial-intelligence/</link>
+      <pubDate>Sat, 05 Jan 2019 00:00:00 +0200</pubDate>
       
-      <guid>http://inoryy.com/post/getting-started/</guid>
-      <description>Academic is a framework to help you create a beautiful website quickly. Perfect for personal sites, blogs, or business/project sites. Check out the latest demo of what you&amp;rsquo;ll get in less than 10 minutes. Then head on over to the Quick Start guide or take a look at the Release Notes.
-
-Key features:
- Easily manage various content including homepage, blog posts, publications, talks, and projects Extensible via color themes and widgets/plugins Write in Markdown for easy formatting and code highlighting, with LaTeX for mathematical expressions Social/academic network linking, Google Analytics, and Disqus comments Responsive and mobile friendly Simple and refreshing one page design Multilingual and easy to customize  Color Themes Academic is available in different color themes and font themes.</description>
+      <guid>http://inoryy.com/post/why-study-statistics-for-artificial-intelligence/</guid>
+      <description>Undergraduate major is often the first significant career decision a person makes in his life. As artificial intelligence (AI) becomes more and more ingrained in our society, many people begin to consider a career in AI as a viable choice in their life. However, it is still very rare to have an undergraduate degree fully dedicated to AI, so people opt for what they perceive to be the next best thing - computer science.</description>
     </item>
     
   </channel>
