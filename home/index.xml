@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018--2019</copyright>
-    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Sun, 06 Jan 2019 00:00:00 +0200</lastBuildDate>
     
 	<atom:link href="http://inoryy.com/home/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title></title>
       <link>http://inoryy.com/home/about/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0300</pubDate>
+      <pubDate>Sun, 06 Jan 2019 00:00:00 +0200</pubDate>
       
       <guid>http://inoryy.com/home/about/</guid>
       <description>Biography I have started my career path as a self-taught web developer, specializing with Symfony web framework. I have worked on projects of various scale in many different domains such as finance, education and health. During this time I have actively participated in the open-source community, contributing to projects I used, and releasing my own projects for others to use.

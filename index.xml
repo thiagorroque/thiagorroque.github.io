@@ -7,8 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018--2019</copyright>
-    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Sun, 06 Jan 2019 00:00:00 +0200</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Reaver: StarCraft II Deep Reinforcement Learning</title>
+      <link>http://inoryy.com/project/reaver-drl/</link>
+      <pubDate>Sat, 05 Jan 2019 00:00:00 +0200</pubDate>
+      
+      <guid>http://inoryy.com/project/reaver-drl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Starter Agent for Coders Strike Back AI Challenge</title>
+      <link>http://inoryy.com/project/csb-starter/</link>
+      <pubDate>Sat, 05 Jan 2019 00:00:00 +0200</pubDate>
+      
+      <guid>http://inoryy.com/project/csb-starter/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Why I Majored in Statistics for a Career in Artificial Intelligence</title>
@@ -61,24 +79,6 @@
 
 &lt;p&gt;In conclusion, I believe statistics to be the perfect major for a career in AI. As I am wrapping up my first semester of computer science masters I feel that I am often quite ahead of my peers specifically because of my undergraduate background and hopefully I have persuaded some of you to give it a shot!&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Reaver: StarCraft II Deep Reinforcement Learning</title>
-      <link>http://inoryy.com/project/reaver-drl/</link>
-      <pubDate>Fri, 05 Jan 2018 00:00:00 +0200</pubDate>
-      
-      <guid>http://inoryy.com/project/reaver-drl/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Starter Agent for Coders Strike Back AI Challenge</title>
-      <link>http://inoryy.com/project/csb-starter/</link>
-      <pubDate>Thu, 04 Jan 2018 00:00:00 +0200</pubDate>
-      
-      <guid>http://inoryy.com/project/csb-starter/</guid>
-      <description></description>
     </item>
     
   </channel>
