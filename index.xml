@@ -11,6 +11,114 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>DeepMind, StarCraft II, and The Next Big Thing in AI</title>
+      <link>http://inoryy.com/post/deepmind-starcraft2-next-big-thing-ai/</link>
+      <pubDate>Thu, 24 Jan 2019 00:00:00 +0200</pubDate>
+      
+      <guid>http://inoryy.com/post/deepmind-starcraft2-next-big-thing-ai/</guid>
+      <description>
+
+&lt;p&gt;Couple of days ago out of the blue DeepMind announced a StarCraft II related event, with many of the employees being quite excited about it on twitter. In just a few hours we will see what DeepMind has in store for us, but in the meantime let&amp;rsquo;s take a step back and review how we got here and why it is so important.&lt;/p&gt;
+
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Join us and &lt;a href=&#34;https://twitter.com/Blizzard_Ent?ref_src=twsrc%5Etfw&#34;&gt;@Blizzard_Ent&lt;/a&gt; this Thursday at 6:00pm GMT for an exciting &lt;a href=&#34;https://twitter.com/hashtag/StarCraft?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#StarCraft&lt;/a&gt; demonstration, hosted by &lt;a href=&#34;https://twitter.com/Artosis?ref_src=twsrc%5Etfw&#34;&gt;@Artosis&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/RotterdaM08?ref_src=twsrc%5Etfw&#34;&gt;@RotterdaM08&lt;/a&gt;! &lt;br&gt;&lt;br&gt;Livestream on YouTube: &lt;a href=&#34;https://t.co/lQytLEsT0o&#34;&gt;https://t.co/lQytLEsT0o&lt;/a&gt;&lt;br&gt;&lt;br&gt;Read more about &lt;a href=&#34;https://twitter.com/hashtag/StarCraft2?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#StarCraft2&lt;/a&gt; as an environment for AI research: &lt;a href=&#34;https://t.co/TSUdS9vttG&#34;&gt;https://t.co/TSUdS9vttG&lt;/a&gt; &lt;a href=&#34;https://t.co/Eztc5Bro5Y&#34;&gt;pic.twitter.com/Eztc5Bro5Y&lt;/a&gt;&lt;/p&gt;&amp;mdash; DeepMind (@DeepMindAI) &lt;a href=&#34;https://twitter.com/DeepMindAI/status/1087743023100903426?ref_src=twsrc%5Etfw&#34;&gt;January 22, 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+
+&lt;h1 id=&#34;deepmind&#34;&gt;DeepMind&lt;/h1&gt;
+
+&lt;p&gt;At the end of 2013, DeepMind was a small and relatively unknown startup, founded three years prior with one simple goal: &amp;ldquo;to solve intelligence&amp;rdquo;. Although not yet famous with the general public, they have made a lot of noise in the world of deep reinforcement learning by introducing &lt;a href=&#34;https://deepmind.com/research/dqn/&#34; target=&#34;_blank&#34;&gt;DQN&lt;/a&gt; - an algorithm, capable of matching or even surpassing humans at playing the Atari video games, while observing the game from raw pixels similar to how a human would. In the early 2014 DeepMind was bought by Google Inc. for $500 million, many speculating that deal was ensured by this one achievement.&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&#34;https://raw.githubusercontent.com/kuz/DeepMind-Atari-Deep-Q-Learner/master/gifs/breakout.gif&#34;  /&gt;
+  &lt;figcaption style=&#34;text-align: center;&#34;&gt;
+      &lt;small&gt;Atari game of Breakout, played by DQN agent. &lt;a href=&#34;https://github.com/kuz/DeepMind-Atari-Deep-Q-Learner&#34;&gt;Source&lt;/a&gt;.&lt;/small&gt;
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;In March of 2016 DeepMind did it again, with their &lt;a href=&#34;https://deepmind.com/research/alphago/&#34; target=&#34;_blank&#34;&gt;AlphaGo&lt;/a&gt; program decisively winning against Go world champion Lee Sedol, who held the title for a great number of years. While in hindsight this seems as a sure thing, three years ago this win came almost out of nowhere, with many researchers at the time were predicting that AI will not match human experts for another 10 years at least.&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&#34;https://i.imgur.com/NNIEdt5.jpg&#34;  /&gt;
+  &lt;figcaption style=&#34;text-align: center;&#34;&gt;
+      &lt;small&gt;DeepMind&#39;s AlphaGo winning vs Lee Sedol. &lt;a href=&#34;https://www.engadget.com/2016/03/12/watch-alphago-vs-lee-sedol-round-3-live-right-now/&#34;&gt;Source&lt;/a&gt;.&lt;/small&gt;
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h1 id=&#34;starcraft-ii&#34;&gt;StarCraft II&lt;/h1&gt;
+
+&lt;p&gt;Shortly after DeepMind&amp;rsquo;s AlphaGo victory, DeepMind were already prepared to announce the next challenge they will be tackling: the StarCraft II video game. StarCraft II is a real-time strategy game that requires making split second decisions on strategical, tactical, and economical levels, with short-term and long-term goals, throughout the whole duration of the game. Together with its predecessor StarCraft: Brood War, it has a rich competitive e-sports history spanning over 20 years, and is actively played by millions to this day.&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&#34;https://i.imgur.com/yaOixgL.png&#34;  /&gt;
+  &lt;figcaption style=&#34;text-align: center;&#34;&gt;
+      &lt;small&gt;Serral securing his world championship title at WCS 2018. &lt;a href=&#34;https://youtu.be/ZO9kqMGK190&#34;&gt;Source&lt;/a&gt;.&lt;/small&gt;
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;With much bigger state and action spaces, real-time component, partial observability, and longer game duration, this is a much more difficult task than any attempted before. In fact many AI researchers have actually attempted to tackle it, notably the StarCraft: Brood War bot &lt;a href=&#34;https://arstechnica.com/gaming/2011/01/skynet-meets-the-swarm-how-the-berkeley-overmind-won-the-2010-starcraft-ai-competition/&#34; target=&#34;_blank&#34;&gt;OverMind&lt;/a&gt; was a collaborative effort of many talented scientists. Yet, when pitted against human players, the AI champion would be easily defeated even by relative novices to the game.&lt;/p&gt;
+
+&lt;p&gt;This massive challenge alone wasn&amp;rsquo;t enough for DeepMind researchers, they decided to go one step further. They wanted to not only challenge human experts, but do so &amp;ldquo;on their terms&amp;rdquo;. The AI will be observing the game in a similar way to humans, through image-like features, and will be acting by emulating keyboard and mouse commands as close as possible.&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&#34;https://i.imgur.com/9FQkrkJ.jpg&#34;  /&gt;
+  &lt;figcaption style=&#34;text-align: center;&#34;&gt;
+      &lt;small&gt;On the right: StarCraft II game as seen by the AI. &lt;a href=&#34;https://deepmind.com/blog/deepmind-and-blizzard-open-starcraft-ii-ai-research-environment/&#34;&gt;Source&lt;/a&gt;.&lt;/small&gt;
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Furthermore, the AI is limited in many aspects to match human experiences, e.g. it is allowed to take a limited number of actions per minute (APM) and can only access the same information a human would see on the screen or minimap. This means that the AI must learn to use in-game camera in order to effectively play.&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&#34;https://storage.googleapis.com/deepmind-live-cms/documents/Oriol-Fig-Anim-170809-Optimised-r03.gif&#34;  /&gt;
+  &lt;figcaption style=&#34;text-align: center;&#34;&gt;
+      &lt;small&gt;StarCraft II AI emulates actions as close to humans as possible. &lt;a href=&#34;https://deepmind.com/blog/deepmind-and-blizzard-open-starcraft-ii-ai-research-environment/&#34;&gt;Source&lt;/a&gt;.&lt;/small&gt;
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h1 id=&#34;the-next-big-thing-in-ai&#34;&gt;The Next Big Thing in AI&lt;/h1&gt;
+
+&lt;p&gt;A StarCraft II player might wonder what is special about this if there were relatively good AIs built into the game from release. The AI you encounter in-game acts based on some pre-defined set of rules, which means it can only play as well as the person who programmed it, reacting only to forseen events. This makes the AI inflexible, and easy to exploit, among other things.&lt;/p&gt;
+
+&lt;p&gt;In contrast, the AI DeepMind is working on learns the game by itself, essentially from scratch. At each step all it has is the game state it observed, the actions it can take, and some reward stimulus it received for a previous action. In geenral the approach is called reinforcement learning and &lt;a href=&#34;http://inoryy.com/post/tensorflow2-deep-reinforcement-learning/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; I give a brief overview of the field.&lt;/p&gt;
+
+&lt;p&gt;To get a feel for what it&amp;rsquo;s like for an RL agent to &amp;ldquo;learn&amp;rdquo; the game, here is a video of an agent attempting to tackle a set of minigames released by DeepMind. On the left you can see an agent that just started the process and is exploring all the various actions it can take, and on the right is the same agent after a fair bit of such experiments (about 50 million steps on average).&lt;/p&gt;
+
+&lt;p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/gEyBzcPU5-w&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;br/&gt;&lt;/p&gt;
+
+&lt;p&gt;An outside reader might wonder why AI researchers focus so much on games to begin with. The answer is simple: real-world is just too complex for an AI system at this point - one must first learn to walk before he gets to fly. Specifically, games have easily defined rules that can be described to an AI system and are typically easy to run in parallel on a computer, speeding up the learning process.&lt;/p&gt;
+
+&lt;p&gt;This however does not mean that current work will be useless in the future. For example, while &amp;ldquo;playing&amp;rdquo; with StarCraft II, DeepMind researchers produced a number of general-purpose results such as the &lt;a href=&#34;https://deepmind.com/blog/population-based-training-neural-networks/&#34; target=&#34;_blank&#34;&gt;population based training&lt;/a&gt;, and &lt;a href=&#34;https://openreview.net/forum?id=HkxaFoC9KQ&#34; target=&#34;_blank&#34;&gt;relational deep reinforcement learning&lt;/a&gt;. So while developing an AI capable of winning in StarCraft II with human-like restrictions &lt;em&gt;probably&lt;/em&gt; won&amp;rsquo;t give us &lt;a href=&#34;https://en.wikipedia.org/wiki/Artificial_general_intelligence&#34; target=&#34;_blank&#34;&gt;AGI&lt;/a&gt;, it will definitely bring us an inch closer.&lt;/p&gt;
+
+&lt;h1 id=&#34;predictions-and-speculations&#34;&gt;Predictions and Speculations&lt;/h1&gt;
+
+&lt;p&gt;In this section I will attempt to predict some of the things we will see at the event, along with the nitty-gritty details &amp;ldquo;under the hood&amp;rdquo; of the AI, which might get a bit technical. Note that I have no insider information, this is simply my guesses.&lt;/p&gt;
+
+&lt;p&gt;For the event itself I believe it will be a Protoss vs Protoss showmatch between DeepMind&amp;rsquo;s AI and some high level player, either ex-pro or possibly even current pro, however not best of the best tier. I would be &lt;em&gt;really&lt;/em&gt; surprised if they are already at a level to challenge world champions.&lt;/p&gt;
+
+&lt;p&gt;The core algorithm they will employ will be an &lt;code&gt;actor-critic&lt;/code&gt; variant called &lt;a href=&#34;https://deepmind.com/blog/impala-scalable-distributed-deeprl-dmlab-30/&#34; target=&#34;_blank&#34;&gt;IMPALA&lt;/a&gt;, fused with &lt;code&gt;attention&lt;/code&gt; mechanism as described in &lt;a href=&#34;https://openreview.net/forum?id=HkxaFoC9KQ&#34; target=&#34;_blank&#34;&gt;Relational DRL&lt;/a&gt;. Network architecture will have &lt;code&gt;residual + convolutional&lt;/code&gt; state encoder component and a number of &lt;code&gt;Conv LSTM&lt;/code&gt; blocks generating the policy. It will also have a fair bit of &lt;code&gt;imitation learning&lt;/code&gt; based pre-training prior to the DRL loop.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;IMPALA&lt;/code&gt; algorithm is essentially a distributed, asyncronous version of &lt;code&gt;A2C&lt;/code&gt; I&amp;rsquo;ve described in &lt;a href=&#34;http://inoryy.com/post/tensorflow2-deep-reinforcement-learning/&#34; target=&#34;_blank&#34;&gt;this&lt;/a&gt; blog with a number of fixes (e.g. importance weighting) to address its &amp;ldquo;off-policyness&amp;rdquo; - the fact that samples are gathered with a different policy than the one being currently trained. If you&amp;rsquo;re familiar with &lt;a href=&#34;https://blog.openai.com/openai-five/&#34; target=&#34;_blank&#34;&gt;openAI Five&lt;/a&gt; then the core idea is similar to their asyncronous PPO: a (massively) distributed advantage actor-critic variant with tricks to correct for the distributional drift.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;attention&lt;/code&gt; mechanism has revolutionized the world of NLP, especially after the &amp;ldquo;&lt;a href=&#34;https://arxiv.org/abs/1706.03762&#34; target=&#34;_blank&#34;&gt;Attention is All You Need&lt;/a&gt;&amp;rdquo; article came out. In short, if we&amp;rsquo;re dealing with sequential input / output then attention mechanism acts as importance weight for items in the given sequence when generating the next output. In NLP this is most often used for machine translation to give attention to words at different parts of the sentence. In StarCraft II this could be used to ensure the agent can quickly switch between tactical and strategical decision making. DeepMind has recently applied it to DRL in their &lt;a href=&#34;https://openreview.net/forum?id=HkxaFoC9KQ&#34; target=&#34;_blank&#34;&gt;Relational DRL&lt;/a&gt; article.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;residual + convolutional&lt;/code&gt; architecture makes sense to use given our state space, whereas &lt;code&gt;Conv LSTM&lt;/code&gt; cells (NB! different from &lt;em&gt;CNN&lt;/em&gt; LSTM) are starting to gain traction in DRL world, especially when observations are rich with spatial information.&lt;/p&gt;
+
+&lt;p&gt;During Blizzcon 2018 presentation Oriol Vinyals mentioned that they&amp;rsquo;ve used &lt;code&gt;imitation learning&lt;/code&gt; for their agent - and it of course make sense, given that Blizzard is providing free access (to everybody!) to their massive dataset of replays. Of course it would be impossible to succesfully train a full agent from replays alone, but I think it&amp;rsquo;s reasonable to use it for NN weights pre-training.&lt;/p&gt;
+
+&lt;p&gt;I also wouldn&amp;rsquo;t be surprised if instead of fully end-to-end approach DeepMind will rely on something modular, e.g. as described &lt;a href=&#34;https://arxiv.org/abs/1811.03555&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;, where individual modules are responsible for specific subsets of the game. Specifically, perhaps DeepMind relies on pre-defined rulesets for scouting and makes use of a simplified game engine for battle simulations that are used in MCTS solver to determine whether they should attack or fall back.&lt;/p&gt;
+
+&lt;h1 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h1&gt;
+
+&lt;p&gt;Hopefully you&amp;rsquo;re now as excited as I am about the upcoming event. Whether the AI is fully end to end or not and whether they will be able to win vs human experts or not, it is still a massive endeavor and should provide for a good show. And if you&amp;rsquo;d like to get into developing StarCraft II based AIs yourself, join our &lt;a href=&#34;https://discordapp.com/invite/Emm5Ztz&#34; target=&#34;_blank&#34;&gt;SC2AI community on discord&lt;/a&gt;!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Deep Reinforcement Learning with TensorFlow 2.0</title>
       <link>http://inoryy.com/post/tensorflow2-deep-reinforcement-learning/</link>
       <pubDate>Sun, 20 Jan 2019 00:00:00 +0200</pubDate>
