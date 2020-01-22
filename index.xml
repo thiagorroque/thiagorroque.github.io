@@ -11,6 +11,413 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>The Next Generation of Machine Learning Tools</title>
+      <link>http://inoryy.com/post/next-gen-ml-tools/</link>
+      <pubDate>Wed, 22 Jan 2020 00:00:00 +0200</pubDate>
+      
+      <guid>http://inoryy.com/post/next-gen-ml-tools/</guid>
+      <description>
+
+&lt;p&gt;&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#tools-in-ml-research&#34;&gt;Tools in ML Research&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#a-need-for-innovation&#34;&gt;A Need for Innovation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#the-next-generation&#34;&gt;The Next Generation&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#swift-for-tensorflow&#34;&gt;Swift for TensorFlow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#jax&#34;&gt;JAX&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#conclusion&#34;&gt;Conclusion&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;http://inoryy.com/js/fix-toc.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;Let&amp;rsquo;s travel back to a simpler time when all everyone talked about in machine learning were SVMs and boosted trees,
+while Andrew Ng introduced neural networks as a neat party hat trick you would probably never use in practice&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:mlcoursera&#34;&gt;&lt;a href=&#34;#fn:mlcoursera&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;The year is 2012, and computer-vision based competition ImageNet is set to be once again won by the newest ensemble of kernel methods.
+That is, of course, until a couple of researchers unveiled AlexNet&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:alexnet&#34;&gt;&lt;a href=&#34;#fn:alexnet&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;, having almost two times lower error rate than the competition,
+by using what we now commonly refer to as &amp;ldquo;deep learning.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Many people point to AlexNet as one of the most important scientific breakthroughs of the decade, certainly one that helped change the landscape of ML research.
+However, it does not take much to realize that under the hood, it is &amp;ldquo;just&amp;rdquo; a combination of prior iterative improvements, many dating back to the early nineties.
+At its core, AlexNet is &amp;ldquo;just&amp;rdquo; a modified LeNet&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:lenet&#34;&gt;&lt;a href=&#34;#fn:lenet&#34;&gt;3&lt;/a&gt;&lt;/sup&gt; with more layers, better weight initialization, activation function, and data augmentation.&lt;/p&gt;
+
+&lt;h2 id=&#34;tools-in-ml-research&#34;&gt;Tools in ML Research&lt;/h2&gt;
+
+&lt;p&gt;So what made AlexNet stand out so much? I believe the answer lies in the tools researchers had at their disposal, enabling them to run artificial neural networks on GPU accelerators,
+a relatively novel idea at the time.
+In fact, Alex Krizhevsky&amp;rsquo;s former colleagues recall that many meetings before the competition consisted of Alex describing his progress with the CUDA quirks and features.&lt;/p&gt;
+
+&lt;p&gt;Now let us travel back to 2015 when ML research article submissions started blowing up across the board,
+including (re-)emergence of many now promising approaches such as generative adversarial learning, deep reinforcement learning,
+meta learning, self-supervised learning, federated learning, neural architecture search, neural differential equations, neural graph networks, and many more.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://miro.medium.com/max/770/1*Y-CZdwBP2L_XW1YRLdxt0A.png&#34; alt=&#34;&#34; /&gt;
+&lt;span class=&#34;source&#34;&gt;Image via &lt;a href=&#34;https://medium.com/@dcharrezt/neurips-2019-stats-c91346d31c8f&#34; target=&#34;_blank&#34;&gt;Charrez, D. (2019)&lt;/a&gt;.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;One could claim that this is just a natural outcome of the AI hype. However, I believe a significant factor was the emergence of second generation of general-purpose
+ML frameworks such as TensorFlow&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:tf&#34;&gt;&lt;a href=&#34;#fn:tf&#34;&gt;4&lt;/a&gt;&lt;/sup&gt; and PyTorch&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:pt&#34;&gt;&lt;a href=&#34;#fn:pt&#34;&gt;5&lt;/a&gt;&lt;/sup&gt;, along with NVIDIA going all-in on AI. The frameworks that existed before, such as Caffe&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:caffe&#34;&gt;&lt;a href=&#34;#fn:caffe&#34;&gt;6&lt;/a&gt;&lt;/sup&gt; and Theano&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:theano&#34;&gt;&lt;a href=&#34;#fn:theano&#34;&gt;7&lt;/a&gt;&lt;/sup&gt;,
+were challenging to work with, and awkward to extend, which slowed down the research and development of novel ideas.&lt;/p&gt;
+
+&lt;h2 id=&#34;a-need-for-innovation&#34;&gt;A Need for Innovation&lt;/h2&gt;
+
+&lt;p&gt;TensorFlow and PyTorch were undoubtedly a net positive, and the teams worked hard to improve the libraries.
+Recently, they delivered TensorFlow 2.0 with a more straightforward interface along with eager mode&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:tfe&#34;&gt;&lt;a href=&#34;#fn:tfe&#34;&gt;8&lt;/a&gt;&lt;/sup&gt;,
+and PyTorch 1.0 with JIT compilation of the computation graph&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:ts&#34;&gt;&lt;a href=&#34;#fn:ts&#34;&gt;9&lt;/a&gt;&lt;/sup&gt; as well as support for XLA&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:xla&#34;&gt;&lt;a href=&#34;#fn:xla&#34;&gt;10&lt;/a&gt;&lt;/sup&gt; based accelerators such as TPUs&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:tpu&#34;&gt;&lt;a href=&#34;#fn:tpu&#34;&gt;11&lt;/a&gt;&lt;/sup&gt;.
+However, these frameworks are also beginning to reach their limits, forcing researchers into some paths while closing doors on others, just like their predecessors.&lt;/p&gt;
+
+&lt;p&gt;High-profile DRL projects such as AlphaStar&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:alphastar&#34;&gt;&lt;a href=&#34;#fn:alphastar&#34;&gt;12&lt;/a&gt;&lt;/sup&gt; and OpenAI Five&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:dota&#34;&gt;&lt;a href=&#34;#fn:dota&#34;&gt;13&lt;/a&gt;&lt;/sup&gt; not only utilized large-scale computational clusters
+but also pushed the limits of deep learning architecture components by combining deep transformers, nested recurrent networks, deep residual towers, among others.&lt;/p&gt;
+
+&lt;p&gt;In his &lt;a href=&#34;https://www.thetimes.co.uk/article/demis-hassabis-interview-the-brains-behind-deepmind-on-the-future-of-artificial-intelligence-mzk0zhsp8&#34; target=&#34;_blank&#34;&gt;interview with The Times newspaper&lt;/a&gt;,
+Demis Hassabis has stated that DeepMind will be focusing on applying AI directly for scientific breakthroughs.
+We can already see a glimpse of that shift in direction with some of their recent Nature articles on neuroscience&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:dopamine&#34;&gt;&lt;a href=&#34;#fn:dopamine&#34;&gt;14&lt;/a&gt;&lt;/sup&gt; and protein folding&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:alphafold&#34;&gt;&lt;a href=&#34;#fn:alphafold&#34;&gt;15&lt;/a&gt;&lt;/sup&gt;.
+Even a brief skim through the publications is enough to see that the projects required some unconventional approaches when it comes to engineering.&lt;/p&gt;
+
+&lt;p&gt;At NeurIPS 2019, probabilistic programming and bayesian inference were hot topics, especially uncertainty estimation and causal inference.
+Leading AI researchers presented their visions on what the future of ML might look like.
+Notably, Yoshua Bengio described transitioning to &lt;a href=&#34;https://slideslive.com/38921750/from-system-1-deep-learning-to-system-2-deep-learning&#34; target=&#34;_blank&#34;&gt;system 2 deep learning&lt;/a&gt;
+with out-of-distribution generalization, sparse graph networks, and causal reasoning.&lt;/p&gt;
+
+&lt;p&gt;To summarize, some of the requirements for next-gen ML tools are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;fine-grained control flow use&lt;/li&gt;
+&lt;li&gt;non-standard optimization loops&lt;/li&gt;
+&lt;li&gt;higher-order differentiation as a first-class citizen&lt;/li&gt;
+&lt;li&gt;probabilistic programming as a first-class citizen&lt;/li&gt;
+&lt;li&gt;support for multiple heterogeneous accelerators in one model&lt;/li&gt;
+&lt;li&gt;seamless scalability from a single machine to gigantic clusters&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ideally, the tools should also maintain a clean, straightforward, and extensible API, enabling scientists to research and develop their ideas rapidly.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-next-generation&#34;&gt;The Next Generation&lt;/h2&gt;
+
+&lt;p&gt;The good news is that many candidates already exist today, emerging in response to the needs in scientific computing.
+From experimental projects like Zygote.jl&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:zygote&#34;&gt;&lt;a href=&#34;#fn:zygote&#34;&gt;16&lt;/a&gt;&lt;/sup&gt; to even specialized languages, e.g. Halide&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:halide&#34;&gt;&lt;a href=&#34;#fn:halide&#34;&gt;17&lt;/a&gt;&lt;/sup&gt; and DiffTaichi&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:taichi&#34;&gt;&lt;a href=&#34;#fn:taichi&#34;&gt;18&lt;/a&gt;&lt;/sup&gt;.
+Interestingly, many projects draw inspiration from the fundamental works done by researchers in the auto-diff community&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:ad-survey&#34;&gt;&lt;a href=&#34;#fn:ad-survey&#34;&gt;19&lt;/a&gt;&lt;/sup&gt;, which evolved in parallel to ML.&lt;/p&gt;
+
+&lt;p&gt;Many of them were featured at the recent NeurIPS 2019 &lt;a href=&#34;https://program-transformations.github.io/&#34; target=&#34;_blank&#34;&gt;workshop on program transformations&lt;/a&gt;.
+The two I am most excited about are S4TF&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:s4tf&#34;&gt;&lt;a href=&#34;#fn:s4tf&#34;&gt;20&lt;/a&gt;&lt;/sup&gt; and JAX&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:jax&#34;&gt;&lt;a href=&#34;#fn:jax&#34;&gt;21&lt;/a&gt;&lt;/sup&gt;.
+They both tackle the task of making differentiable programming into an integral part of the toolchain, but in their own ways, almost orthogonal to each other.&lt;/p&gt;
+
+&lt;h3 id=&#34;swift-for-tensorflow&#34;&gt;Swift for TensorFlow&lt;/h3&gt;
+
+&lt;p&gt;As the name suggests, S4TF tightly integrates the TensorFlow ML framework with the Swift programming language.
+A vote of confidence for the project is that it is led by Chris Lattner, who has authored LLVM&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:llvm&#34;&gt;&lt;a href=&#34;#fn:llvm&#34;&gt;22&lt;/a&gt;&lt;/sup&gt;, Clang&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:clang&#34;&gt;&lt;a href=&#34;#fn:clang&#34;&gt;23&lt;/a&gt;&lt;/sup&gt;, and Swift itself.&lt;/p&gt;
+
+&lt;p&gt;Swift is a compiled programming language, and one of its primary selling points is
+the powerful type system that is static and inferred. What the last part means in
+simpler terms is that Swift encompasses ease of use in languages like Python
+with code validations and transformations at compile-time, e.g., as in C++.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-swift&#34;&gt;let a: Int = 1
+let b = 2
+let c = &amp;quot;3&amp;quot;
+
+print(a + b)         // 3
+print(b + c)         // compilation (!) error
+print(String(b) + c) // 23
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Swift features enable the S4TF team to meet quite a few requirements in the next-generation list
+by having analysis, verification, and optimization of the computation graph executed with efficient algorithms during compilation.&lt;/p&gt;
+
+&lt;p&gt;Crucially, the handling of automatic differentiation is off-loaded to the compiler.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-swift&#34;&gt;struct Linear: Differentiable {
+  var w: Float
+  var b: Float
+
+  func callAsFunction(_ x: Float) -&amp;gt; Float {
+    return w * x + b
+  }
+}
+
+let f = Linear(w: 1, b: 2)
+let 𝛁f = gradient(at: f) { f in f(3.0) }
+print(𝛁f) // TangentVector(w: 3.0, b: 1.0)
+
+let 𝛁f2 = gradient(at: f) { f in f([3.0]) } // compilation (!) error
+// error: cannot convert value of type &#39;[Float]&#39; to expected argument type &#39;Float&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Of course, TensorFlow itself is very well supported in this case.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-swift&#34;&gt;import TensorFlow
+
+struct Model: Layer {
+    var conv = Conv2D&amp;lt;Float&amp;gt;(filterShape: (5, 5, 6, 16), activation: relu)
+    var pool = MaxPool2D&amp;lt;Float&amp;gt;(poolSize: (2, 2), strides: (2, 2))
+    var flatten = Flatten&amp;lt;Float&amp;gt;()
+    var dense = Dense&amp;lt;Float&amp;gt;(inputSize: 16 * 5 * 5, outputSize: 100, activation: relu)
+    var logits = Dense&amp;lt;Float&amp;gt;(inputSize: 100, outputSize: 10, activation: identity)
+
+    @differentiable
+    func callAsFunction(_ input: Tensor&amp;lt;Float&amp;gt;) -&amp;gt; Tensor&amp;lt;Float&amp;gt; {
+        return input.sequenced(through: conv, pool, flatten, dense, logits)
+    }
+}
+
+var model = Model()
+let optimizer = RMSProp(for: model, learningRate: 3e-4, decay: 1e-6)
+
+for batch in CIFAR10().trainDataset.batched(128) {
+  let (loss, gradients) = valueWithGradient(at: model) { model in
+    softmaxCrossEntropy(logits: model(batch.data), labels: batch.label)
+  }
+  print(loss)
+  optimizer.update(&amp;amp;model, along: gradients)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;On the other hand, if a critical feature is proving to be difficult to implement,
+having intimate knowledge of the whole pipeline is particularly valuable.
+For example, the &lt;a href=&#34;https://mlir.llvm.org/&#34; target=&#34;_blank&#34;&gt;MLIR&lt;/a&gt; compiler framework is a direct result of the S4TF efforts.&lt;/p&gt;
+
+&lt;p&gt;While differentiable programming is the core goal, S4TF is much more than that with a plan to support the
+infrastructure for various next-gen ML tools such as debuggers.
+For example, imagine an IDE warning a user that the custom model computation always results in a zero gradient
+without even executing it.&lt;/p&gt;
+
+&lt;p&gt;Python has an incredible community built around scientific computing and the S4TF team have explicitly
+taken the time to embrace it via interoperability.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-swift&#34;&gt;import Python // All that is necessary to enable the interop.
+
+let np = Python.import(&amp;quot;numpy&amp;quot;) // Can import any Python module.
+let plt = Python.import(&amp;quot;matplotlib.pyplot&amp;quot;) 
+
+let x = np.arange(0, 10, 0.01)
+plt.plot(x, np.sin(x)) // Can use the modules as if inside Python.
+plt.show() // Will show the sin plot, just as you would expect.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This project is a significant undertaking and still has some ways to go before being ready for production.
+However, this is a great time to give it a try for both engineers and researchers and potentially contribute to its development.
+Work on S4TF has already produced interesting scientific advancements at the intersection of programming language and auto-diff theory&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:diff-curry&#34;&gt;&lt;a href=&#34;#fn:diff-curry&#34;&gt;24&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;One thing that especially stands out for me about S4TF is &lt;a href=&#34;https://github.com/tensorflow/community/blob/master/sigs/swift/CHARTER.md&#34; target=&#34;_blank&#34;&gt;their approach to community outreach&lt;/a&gt;.
+For example, the core developers hold weekly design sessions, which are open for anyone interested to join and even participate.&lt;/p&gt;
+
+&lt;p&gt;To learn more about Swift for TensorFlow, here are some useful resources:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://course.fast.ai/part2.html#lesson-13-basics-of-swift-for-deep-learning&#34; target=&#34;_blank&#34;&gt;Fast.ai&amp;rsquo;s Lessons 13 and 14&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/tensorflow/swift/blob/master/docs/WhySwiftForTensorFlow.md&#34; target=&#34;_blank&#34;&gt;Design Doc: Why Swift For TensorFlow?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://colab.research.google.com/github/tensorflow/swift/blob/master/docs/site/tutorials/model_training_walkthrough.ipynb&#34; target=&#34;_blank&#34;&gt;Model Training Tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://colab.research.google.com/github/tensorflow/swift/blob/master/notebooks/blank_swift.ipynb&#34; target=&#34;_blank&#34;&gt;Pre-Built Google Colab Notebook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/tensorflow/swift-models&#34; target=&#34;_blank&#34;&gt;Swift Models for Popular Architectures in DL and DRL&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;jax&#34;&gt;JAX&lt;/h3&gt;
+
+&lt;p&gt;JAX is a collection of function transformations such as just-in-time compilation and automatic differentiation,
+implemented as a thin wrapper over XLA with an API that is essentially a drop-in replacement for NumPy and SciPy.
+In fact, one way to get started with JAX is to think of it as an accelerator backed NumPy.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import jax.numpy as np
+
+# Will be seamlessly executed on an accelerator such as GPU/TPU.
+x, w, b = np.ones((3, 1000, 1000))
+y = np.dot(w, x) + b
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Of course, in reality, JAX is much more than that. To many, it might seem that the project appeared out of thin air,
+but the truth is that it is an evolution of over five years of research spanning across three projects.
+Notably, JAX emerged from &lt;a href=&#34;https://github.com/hips/autograd&#34; target=&#34;_blank&#34;&gt;Autograd&lt;/a&gt; &amp;ndash; a research endeavor into AD of native program code
+&amp;ndash; generalizing on its core ideas to support arbitrary transformations.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def f(x):
+  return np.where(x &amp;gt; 0, x, x / (1 + np.exp(-x)))
+
+# Note: same singular style for the API entry points.
+jit_f = jax.jit(f) # Will be 10-100x faster, depending on the accelerator.
+grad_f = jax.grad(f) # Will work as expected, handling both branches. 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Aside from the &lt;code&gt;grad&lt;/code&gt; and &lt;code&gt;jit&lt;/code&gt; discussed above, there are two more excellent examples of JAX transformations, helping
+users to batch-process their data via auto-vectorization of batch dimension (&lt;code&gt;vmap&lt;/code&gt;) or across multiple devices (&lt;code&gt;pmap&lt;/code&gt;).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;a = np.ones((100, 300))
+
+def g(vec):
+  return np.dot(a, vec)
+
+# Suppose `z` is a batch of 10 samples of 1 x 300 vectors.
+z = np.ones((10, 300))
+
+g(z) # Will not work due to (batch) dimension mismatch (100x300 x 10x300).
+
+vec_g = jax.vmap(g)
+vec_g(z) # Will work, efficiently propagating through batch dimension.
+
+# Manual solution requires &amp;quot;playing&amp;quot; with matrix transpositions.
+np.dot(a, z.T)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;These features might seem confusing at first, but after some practice, they turn into an irreplaceable part of a researcher&amp;rsquo;s toolbox.
+They have even inspired recent development of similar functionality in both &lt;a href=&#34;https://www.tensorflow.org/api_docs/python/tf/vectorized_map&#34; target=&#34;_blank&#34;&gt;TensorFlow&lt;/a&gt;
+and &lt;a href=&#34;https://twitter.com/apaszke/status/1219886260296261632&#34; target=&#34;_blank&#34;&gt;PyTorch&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;For the time being, JAX authors seem to be sticking to their core competency when it comes to developing new features.
+Of course, a reasonable approach but is also the cause for one of it&amp;rsquo;s main drawbacks:
+lack of built-in neural network components, aside from the proof-of-concept &lt;a href=&#34;https://github.com/google/jax/blob/master/jax/experimental/stax.py&#34; target=&#34;_blank&#34;&gt;Stax&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Adding higher-level features is something where end-users can potentially step in and contribute, and given JAX&amp;rsquo;s solid foundation,
+the task might be easier than it seems. For example, there are now two &amp;ldquo;competing&amp;rdquo; libraries built on top of JAX,
+both developed by Google researchers, with differing approaches:
+&lt;a href=&#34;https://github.com/google/trax&#34; target=&#34;_blank&#34;&gt;Trax&lt;/a&gt; and &lt;a href=&#34;https://github.com/google-research/flax/tree/prerelease&#34; target=&#34;_blank&#34;&gt;Flax&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Trax approach is functional.
+# Note: params are stored outside and `forward` is &amp;quot;pure&amp;quot;.
+
+import jax.numpy as np
+from trax.layers import base
+
+class Linear(base.Layer):
+  def __init__(self, num_units, init_fn):
+    super().__init__()
+    self.num_units = num_units
+    self.init_fn = init_fn
+
+  def forward(self, x, w):
+    return np.dot(x, w)
+
+  def new_weights(self, input_signature):
+    w = self.init_fn((input_signature.shape, self._num_units))
+    return w
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Flax approach is object-oriented, closer to PyTorch style.
+
+import jax.numpy as np
+from flax import nn
+
+class Linear(nn.Module):
+  def apply(self, x, num_units, init_fn):
+    W = self.param(&#39;W&#39;, (x.shape[-1], num_units), init_fn)
+    return np.dot(x, W)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Even though some might prefer a singular way, endorsed by core developers,
+having diversity of methods is a good indicator that the technology is sound.&lt;/p&gt;
+
+&lt;p&gt;There are also some directions in research where JAX features especially shine.
+For example, in meta-learning, one common approach to train the meta-learner is by computing the gradients of the inputs.
+An alternative method for computing gradients &amp;ndash; forward-mode auto-differentiation &amp;ndash; is necessary to solve this task efficiently,
+which is supported out-of-the-box in JAX but is either non-existent or an experimental feature in other libraries.&lt;/p&gt;
+
+&lt;p&gt;JAX is perhaps more polished and production-ready than its S4TF counter-part and some of the recent developments coming out of Google Research
+rely on it, such as Reformer &amp;ndash; a memory-efficient Transformer model capable of handling context windows of a million words while fitting on a consumer GPU&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:reformer&#34;&gt;&lt;a href=&#34;#fn:reformer&#34;&gt;25&lt;/a&gt;&lt;/sup&gt;,
+and Neural Tangents &amp;ndash; a library for complex neural networks of infinite width&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:neural-tangents&#34;&gt;&lt;a href=&#34;#fn:neural-tangents&#34;&gt;26&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;The library is further embraced by the broader scientific computing community, used for works in molecular dynamics&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:jax-md&#34;&gt;&lt;a href=&#34;#fn:jax-md&#34;&gt;27&lt;/a&gt;&lt;/sup&gt;
+and probabilistic programming&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:numpyro&#34;&gt;&lt;a href=&#34;#fn:numpyro&#34;&gt;28&lt;/a&gt;&lt;/sup&gt;, among others.&lt;/p&gt;
+
+&lt;p&gt;To get started with JAX and for further reading, please review the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://slideslive.com/38922046/program-transformations-for-ml-3&#34; target=&#34;_blank&#34;&gt;Talk: Overview by Skye Wanderman-Milne, a core developer&lt;/a&gt; (starts at 44:26)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jax.readthedocs.io/en/latest/notebooks/quickstart.html&#34; target=&#34;_blank&#34;&gt;Notebook: Quickstart, going over fundamental features&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/google/jax/tree/master/cloud_tpu_colabs&#34; target=&#34;_blank&#34;&gt;Notebook: Cloud TPU Playground&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://colinraffel.com/blog/you-don-t-know-jax.html&#34; target=&#34;_blank&#34;&gt;Blog: You don&amp;rsquo;t know JAX&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://rlouf.github.io/post/jax-random-walk-metropolis/&#34; target=&#34;_blank&#34;&gt;Blog: Massively parallel MCMC with JAX&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.evjang.com/2019/11/jaxpt.html&#34; target=&#34;_blank&#34;&gt;Blog: Differentiable Path Tracing on the GPU/TPU&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;ML research is starting to hit the limits of the tools we currently have at our disposal,
+but some new and exciting candidates are right around the corner, such as JAX and S4TF.
+If you feel yourself to be more of an engineer than a researcher and wonder whether there is even a place for you at the ML table,
+hopefully, the answer is clear: right now is the perfect time to get into it.
+Moreover, you have an opportunity to participate on the ground floor of the next generation of ML tools!&lt;/p&gt;
+
+&lt;p&gt;Note that this does not mean TensorFlow or PyTorch are going anywhere, not in the near future. There is still much value in these mature,
+battle-tested libraries. After all, both JAX and S4TF have parts of TensorFlow under their hoods.
+But if you are about to start a new research project or if you feel that you are working around library
+limitations more than on your ideas, then maybe give them a try!&lt;/p&gt;
+
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:mlcoursera&#34;&gt;Ng, A. (2011). Week 4: Neural Networks. COURSERA: Machine Learning.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:mlcoursera&#34;&gt;↑&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:alexnet&#34;&gt;Krizhevsky, A., Sutskever, I., &amp;amp; Hinton, G. E. (2012). Imagenet classification with deep convolutional neural networks. In advances in Neural Information Processing Systems.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:alexnet&#34;&gt;↑&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:lenet&#34;&gt;LeCun, Y., Bottou, L., Bengio, Y., &amp;amp; Haffner, P. (1998). Gradient-based learning applied to document recognition. Proceedings of the IEEE.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:lenet&#34;&gt;↑&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:tf&#34;&gt;Abadi, M., Barham, P., Chen, J., Chen, Z., Davis, A., Dean, J., &amp;hellip; &amp;amp; Kudlur, M. (2016). Tensorflow: A system for large-scale machine learning. In 12th USENIX Symposium on Operating Systems Design and Implementation.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:tf&#34;&gt;↑&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:pt&#34;&gt;Paszke, A., Gross, S., Massa, F., Lerer, A., Bradbury, J., Chanan, G., &amp;hellip; &amp;amp; Desmaison, A. (2019). PyTorch: An imperative style, high-performance deep learning library. In Advances in Neural Information Processing Systems.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:pt&#34;&gt;↑&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:caffe&#34;&gt;Jia, Y., Shelhamer, E., Donahue, J., Karayev, S., Long, J., Girshick, R., &amp;hellip; &amp;amp; Darrell, T. (2014). Caffe: Convolutional architecture for fast feature embedding. In Proceedings of the 22nd ACM international conference on Multimedia.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:caffe&#34;&gt;↑&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:theano&#34;&gt;Bergstra, J., Breuleux, O., Bastien, F., Lamblin, P., Pascanu, R., Desjardins, G., &amp;hellip; &amp;amp; Bengio, Y. (2010). Theano: a CPU and GPU math expression compiler. In Proceedings of the Python for scientific computing conference.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:theano&#34;&gt;↑&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:tfe&#34;&gt;Agrawal, A., Modi, A. N., Passos, A., Lavoie, A., Agarwal, A., Shankar, A., &amp;hellip; &amp;amp; Cai, S. (2019). Tensorflow eager: A multi-stage, python-embedded dsl for machine learning. arXiv preprint arXiv:1903.01855.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:tfe&#34;&gt;↑&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:ts&#34;&gt;Contributors, PyTorch. (2018). Torch script. URL &lt;a href=&#34;https://pytorch.org/docs/stable/jit.html&#34; target=&#34;_blank&#34;&gt;https://pytorch.org/docs/stable/jit.html&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:ts&#34;&gt;↑&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:xla&#34;&gt;Leary, C., &amp;amp; Wang, T. (2017). XLA: TensorFlow, compiled. TensorFlow Dev Summit.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:xla&#34;&gt;↑&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:tpu&#34;&gt;Jouppi, N. P., Young, C., Patil, N., Patterson, D., Agrawal, G., Bajwa, R., &amp;hellip; &amp;amp; Boyle, R. (2017). In-datacenter performance analysis of a tensor processing unit. In 44th Annual International Symposium on Computer Architecture.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:tpu&#34;&gt;↑&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:alphastar&#34;&gt;Vinyals, O., Babuschkin, I., Czarnecki, W. M., Mathieu, M., Dudzik, A., Chung, J., &amp;hellip; &amp;amp; Silver, D. (2019). Grandmaster level in StarCraft II using multi-agent reinforcement learning. Nature. doi:10.1038/s41586-019-1724-z
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:alphastar&#34;&gt;↑&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:dota&#34;&gt;Berner, C., Brockman, G., Chan, B., Cheung, V., Dębiak, P., Dennison, C., &amp;hellip; &amp;amp; Józefowicz, R. (2019). Dota 2 with Large Scale Deep Reinforcement Learning. arXiv preprint arXiv:1912.06680.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:dota&#34;&gt;↑&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:dopamine&#34;&gt;Dabney, W., Kurth-Nelson, Z., Uchida, N., Starkweather, C. K., Hassabis, D., Munos, R., &amp;amp; Botvinick, M. (2020). A distributional code for value in dopamine-based reinforcement learning. Nature. doi: 10.1038/s41586-019-1924-6
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:dopamine&#34;&gt;↑&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:alphafold&#34;&gt;Senior, A., Evans, R., Jumper, J., Kirkpatrick, J., Sifre, L., Green, T., &amp;hellip; &amp;amp; Penedones, H. (2020). Improved protein structure prediction using potentials from deep learning. Nature.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:alphafold&#34;&gt;↑&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:zygote&#34;&gt;Innes, M. (2018). Don&amp;rsquo;t Unroll Adjoint: Differentiating SSA-Form Programs. arXiv preprint arXiv:1810.07951.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:zygote&#34;&gt;↑&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:halide&#34;&gt;Ragan-Kelley, J., Barnes, C., Adams, A., Paris, S., Durand, F., &amp;amp; Amarasinghe, S. (2013). Halide: a language and compiler for optimizing parallelism, locality, and recomputation in image processing pipelines. In ACM Sigplan Notices.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:halide&#34;&gt;↑&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:taichi&#34;&gt;Hu, Y., Anderson, L., Li, T. M., Sun, Q., Carr, N., Ragan-Kelley, J., &amp;amp; Durand, F. (2019). DiffTaichi: Differentiable Programming for Physical Simulation. arXiv preprint arXiv:1910.00935.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:taichi&#34;&gt;↑&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:ad-survey&#34;&gt;Baydin, A. G., Pearlmutter, B. A., Radul, A. A., &amp;amp; Siskind, J. M. (2017). Automatic differentiation in machine learning: a survey. The Journal of Machine Learning Research.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:ad-survey&#34;&gt;↑&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:s4tf&#34;&gt;Wei, R., &amp;amp; Zheng, D. (2018). Swift for TensorFlow. URL &lt;a href=&#34;https://github.com/tensorflow/swift&#34; target=&#34;_blank&#34;&gt;https://github.com/tensorflow/swift&lt;/a&gt;.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:s4tf&#34;&gt;↑&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:jax&#34;&gt;Bradbury, J., Frostig, R., Hawkins, P., Johnson, M. J., Leary, C., Maclaurin, D., &amp;amp; Wanderman-Milne, S (2018). JAX: composable transformations of Python+ NumPy programs. URL &lt;a href=&#34;https://github.com/google/jax&#34; target=&#34;_blank&#34;&gt;https://github.com/google/jax&lt;/a&gt;.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:jax&#34;&gt;↑&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:llvm&#34;&gt;Lattner, C. (2002). LLVM: An infrastructure for multi-stage optimization. Masters thesis, University of Illinois.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:llvm&#34;&gt;↑&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:clang&#34;&gt;Lattner, C. (2008). LLVM and Clang: Next generation compiler technology. In The BSD conference.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:clang&#34;&gt;↑&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:diff-curry&#34;&gt;Vytiniotis, D., Belov, D., Wei, R., Plotkin, G., &amp;amp; Abadi, M. (2019). The Differentiable Curry.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:diff-curry&#34;&gt;↑&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:reformer&#34;&gt;Kitaev, N., Kaiser, L., and Levskaya, A. (2020). Reformer: The Efficient Transformer. In International Conference on Learning Representations.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:reformer&#34;&gt;↑&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:neural-tangents&#34;&gt;Novak, R., Xiao, L., Hron, J., Lee, J., Alemi, A., Sohl-dickstein, J., &amp;amp; Schoenholz, S. (2020). Neural Tangents: Fast and Easy Infinite Neural Networks in Python. In International Conference on Learning Representations.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:neural-tangents&#34;&gt;↑&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:jax-md&#34;&gt;Schoenholz, S., &amp;amp; Cubuk, E. (2020). JAX, MD End-to-End Differentiable, Hardware Accelerated, Molecular Dynamics in Pure Python. Bulletin of the American Physical Society.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:jax-md&#34;&gt;↑&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:numpyro&#34;&gt;Phan, D., Pradhan, N., &amp;amp; Jankowiak, M. (2019). Composable Effects for Flexible and Accelerated Probabilistic Programming in NumPyro.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:numpyro&#34;&gt;↑&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>StarCraft II: Next Big Thing in AI</title>
       <link>http://inoryy.com/post/starcraft2-next-big-thing-ai/</link>
       <pubDate>Thu, 24 Jan 2019 00:00:00 +0200</pubDate>
