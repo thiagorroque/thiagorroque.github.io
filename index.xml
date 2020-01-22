@@ -60,12 +60,12 @@ In fact, Alex Krizhevsky&amp;rsquo;s former colleagues recall that many meetings
 
 &lt;p&gt;Now let us travel back to 2015 when ML research article submissions started blowing up across the board,
 including (re-)emergence of many now promising approaches such as generative adversarial learning, deep reinforcement learning,
-meta learning, self-supervised learning, federated learning, neural architecture search, neural differential equations, neural graph networks, and many more.&lt;/p&gt;
+meta-learning, self-supervised learning, federated learning, neural architecture search, neural differential equations, neural graph networks, and many more.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://miro.medium.com/max/770/1*Y-CZdwBP2L_XW1YRLdxt0A.png&#34; alt=&#34;&#34; /&gt;
 &lt;span class=&#34;source&#34;&gt;Image via &lt;a href=&#34;https://medium.com/@dcharrezt/neurips-2019-stats-c91346d31c8f&#34; target=&#34;_blank&#34;&gt;Charrez, D. (2019)&lt;/a&gt;.&lt;/span&gt;&lt;/p&gt;
 
-&lt;p&gt;One could claim that this is just a natural outcome of the AI hype. However, I believe a significant factor was the emergence of second generation of general-purpose
+&lt;p&gt;One could claim that this is just a natural outcome of the AI hype. However, I believe a significant factor was the emergence of the second generation of general-purpose
 ML frameworks such as TensorFlow&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:tf&#34;&gt;&lt;a href=&#34;#fn:tf&#34;&gt;4&lt;/a&gt;&lt;/sup&gt; and PyTorch&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:pt&#34;&gt;&lt;a href=&#34;#fn:pt&#34;&gt;5&lt;/a&gt;&lt;/sup&gt;, along with NVIDIA going all-in on AI. The frameworks that existed before, such as Caffe&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:caffe&#34;&gt;&lt;a href=&#34;#fn:caffe&#34;&gt;6&lt;/a&gt;&lt;/sup&gt; and Theano&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:theano&#34;&gt;&lt;a href=&#34;#fn:theano&#34;&gt;7&lt;/a&gt;&lt;/sup&gt;,
 were challenging to work with, and awkward to extend, which slowed down the research and development of novel ideas.&lt;/p&gt;
 
@@ -191,7 +191,7 @@ infrastructure for various next-gen ML tools such as debuggers.
 For example, imagine an IDE warning a user that the custom model computation always results in a zero gradient
 without even executing it.&lt;/p&gt;
 
-&lt;p&gt;Python has an incredible community built around scientific computing and the S4TF team have explicitly
+&lt;p&gt;Python has an incredible community built around scientific computing and the S4TF team has explicitly
 taken the time to embrace it via interoperability.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-swift&#34;&gt;import Python // All that is necessary to enable the interop.
@@ -205,7 +205,7 @@ plt.show() // Will show the sin plot, just as you would expect.
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;This project is a significant undertaking and still has some ways to go before being ready for production.
-However, this is a great time to give it a try for both engineers and researchers and potentially contribute to its development.
+However, this is a great time to give it a try for both engineers and researchers and potentially contribute to its development.&lt;br /&gt;
 Work on S4TF has already produced interesting scientific advancements at the intersection of programming language and auto-diff theory&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:diff-curry&#34;&gt;&lt;a href=&#34;#fn:diff-curry&#34;&gt;24&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 
 &lt;p&gt;One thing that especially stands out for me about S4TF is &lt;a href=&#34;https://github.com/tensorflow/community/blob/master/sigs/swift/CHARTER.md&#34; target=&#34;_blank&#34;&gt;their approach to community outreach&lt;/a&gt;.
@@ -272,7 +272,7 @@ They have even inspired recent development of similar functionality in both &lt;
 and &lt;a href=&#34;https://twitter.com/apaszke/status/1219886260296261632&#34; target=&#34;_blank&#34;&gt;PyTorch&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;For the time being, JAX authors seem to be sticking to their core competency when it comes to developing new features.
-Of course, a reasonable approach but is also the cause for one of it&amp;rsquo;s main drawbacks:
+Of course, a reasonable approach but is also the cause for one of its main drawbacks:
 lack of built-in neural network components, aside from the proof-of-concept &lt;a href=&#34;https://github.com/google/jax/blob/master/jax/experimental/stax.py&#34; target=&#34;_blank&#34;&gt;Stax&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Adding higher-level features is something where end-users can potentially step in and contribute, and given JAX&amp;rsquo;s solid foundation,
@@ -312,10 +312,10 @@ class Linear(nn.Module):
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Even though some might prefer a singular way, endorsed by core developers,
-having diversity of methods is a good indicator that the technology is sound.&lt;/p&gt;
+having a diversity of methods is a good indicator that the technology is sound.&lt;/p&gt;
 
 &lt;p&gt;There are also some directions in research where JAX features especially shine.
-For example, in meta-learning, one common approach to train the meta-learner is by computing the gradients of the inputs.
+For example, in meta-learning, one common approach to training a meta-learner is by computing the gradients of the inputs.
 An alternative method for computing gradients &amp;ndash; forward-mode auto-differentiation &amp;ndash; is necessary to solve this task efficiently,
 which is supported out-of-the-box in JAX but is either non-existent or an experimental feature in other libraries.&lt;/p&gt;
 
