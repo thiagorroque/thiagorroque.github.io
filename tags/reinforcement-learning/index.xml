@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018--2020</copyright>
-    <lastBuildDate>Sat, 05 Jan 2019 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 05 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://inoryy.com/tags/reinforcement-learning/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Reaver: Modular Deep Reinforcement Learning</title>
       <link>http://inoryy.com/project/reaver-drl/</link>
-      <pubDate>Sat, 05 Jan 2019 00:00:00 +0200</pubDate>
+      <pubDate>Sat, 05 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>http://inoryy.com/project/reaver-drl/</guid>
       <description></description>

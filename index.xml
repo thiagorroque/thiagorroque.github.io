@@ -7,13 +7,13 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018--2020</copyright>
-    <lastBuildDate>Sun, 06 Jan 2019 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 06 Jan 2019 00:00:00 +0000</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>The Next Generation of Machine Learning Tools</title>
       <link>http://inoryy.com/post/next-gen-ml-tools/</link>
-      <pubDate>Wed, 22 Jan 2020 00:00:00 +0200</pubDate>
+      <pubDate>Wed, 22 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>http://inoryy.com/post/next-gen-ml-tools/</guid>
       <description>
@@ -422,7 +422,7 @@ limitations more than on your ideas, then maybe give them a try!&lt;/p&gt;
     <item>
       <title>StarCraft II: Next Big Thing in AI</title>
       <link>http://inoryy.com/post/starcraft2-next-big-thing-ai/</link>
-      <pubDate>Thu, 24 Jan 2019 00:00:00 +0200</pubDate>
+      <pubDate>Thu, 24 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>http://inoryy.com/post/starcraft2-next-big-thing-ai/</guid>
       <description>
@@ -546,7 +546,7 @@ limitations more than on your ideas, then maybe give them a try!&lt;/p&gt;
     <item>
       <title>Deep Reinforcement Learning With TensorFlow 2.1</title>
       <link>http://inoryy.com/post/tensorflow2-deep-reinforcement-learning/</link>
-      <pubDate>Sun, 20 Jan 2019 00:00:00 +0200</pubDate>
+      <pubDate>Sun, 20 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>http://inoryy.com/post/tensorflow2-deep-reinforcement-learning/</guid>
       <description>
@@ -1081,7 +1081,7 @@ What is clear is that this &amp;ldquo;competition&amp;rdquo; has resulted in a n
     <item>
       <title>Reaver: Modular Deep Reinforcement Learning</title>
       <link>http://inoryy.com/project/reaver-drl/</link>
-      <pubDate>Sat, 05 Jan 2019 00:00:00 +0200</pubDate>
+      <pubDate>Sat, 05 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>http://inoryy.com/project/reaver-drl/</guid>
       <description></description>
@@ -1090,7 +1090,7 @@ What is clear is that this &amp;ldquo;competition&amp;rdquo; has resulted in a n
     <item>
       <title>Starter Agent for Coders Strike Back AI Challenge</title>
       <link>http://inoryy.com/project/csb-starter/</link>
-      <pubDate>Sat, 05 Jan 2019 00:00:00 +0200</pubDate>
+      <pubDate>Sat, 05 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>http://inoryy.com/project/csb-starter/</guid>
       <description></description>
@@ -1099,7 +1099,7 @@ What is clear is that this &amp;ldquo;competition&amp;rdquo; has resulted in a n
     <item>
       <title>Why I Majored in Statistics for a Career in Artificial Intelligence</title>
       <link>http://inoryy.com/post/why-study-statistics-for-artificial-intelligence/</link>
-      <pubDate>Sat, 05 Jan 2019 00:00:00 +0200</pubDate>
+      <pubDate>Sat, 05 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>http://inoryy.com/post/why-study-statistics-for-artificial-intelligence/</guid>
       <description>&lt;p&gt;Undergraduate major is often the first significant career decision a person makes in his life. As artificial intelligence (AI) becomes more and more ingrained in our society, many people begin to consider a career in AI as a viable choice in their life. However, it is still very rare to have an undergraduate degree fully dedicated to AI, so people opt for what they perceive to be the next best thing - computer science. But I believe there is a better alternative: statistics, and in this blog post I will try to explain why, based on my own example.&lt;/p&gt;

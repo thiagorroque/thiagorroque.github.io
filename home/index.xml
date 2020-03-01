@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018--2020</copyright>
-    <lastBuildDate>Sun, 06 Jan 2019 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 06 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://inoryy.com/home/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title></title>
       <link>http://inoryy.com/home/about/</link>
-      <pubDate>Sun, 06 Jan 2019 00:00:00 +0200</pubDate>
+      <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>http://inoryy.com/home/about/</guid>
       <description>Biography I began my career as a self-taught web developer, specializing in Symfony PHP framework, while working on projects of various scale in many different domains such as finance, education, and health. During this time, I actively participated in the open-source community, contributing to the projects I used, and releasing my own.
@@ -52,7 +52,7 @@ After five years of work experience, I decided to pivot my career and take an ac
     <item>
       <title>Teaching</title>
       <link>http://inoryy.com/home/teaching/</link>
-      <pubDate>Fri, 05 Jan 2018 00:00:00 +0200</pubDate>
+      <pubDate>Fri, 05 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>http://inoryy.com/home/teaching/</guid>
       <description>Teaching Assistant, University of Tartu:
