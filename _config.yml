@@ -116,8 +116,8 @@ analytics:
 author:
   name             : "Your Name"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
+  bio              : "Building bridges between art, technology, science and well-being."
+  location         : "Rome, Italy"
   email            :
   # fediverse      : "@you@instance.social"  # used for fediverse:creator meta tag
   links:
@@ -162,7 +162,7 @@ footer:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url:
-  since: "2013"
+  since: "2025"
 
 
 # Reading Files
